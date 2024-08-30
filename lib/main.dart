@@ -1,15 +1,14 @@
-
 import 'package:flutter/material.dart';
-import 'package:simpl_app/Screen/Menus.dart';
+import 'package:simpl_app/Screen/convert.dart';
  
 void main() {
   runApp(MaterialApp(
-    title: "Simple app",
+    title: "Exchange Currency",
     home: Scaffold(
       appBar: AppBar(
         title: Text("Simple App"),
       ),
-      body: Menus(),
+      body: Convert(),
     ),
   ));
 }
