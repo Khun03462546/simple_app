@@ -16,19 +16,18 @@ class _ConvertState extends State<Convert> {
   print("init State");
  }
   Future<Currency> getCurrency() async{
-   var Url = Uri.parse("https://currency-converter-pro1.p.rapidapi.com/latest-rates?base=USD");
+   var Url = Uri.parse("https://currency-converter-pro1.p.rapidapi.com/currencies");
 
    var respon = await http.get(Url,headers:{
     "x-rapidapi-host": "currency-converter-pro1.p.rapidapi.com",
     "x-rapidapi-key": "d030fa0032msha1613d4cd099d99p1906b8jsna6a62b0121bf" 
  });
-  Currency result = await currencyFromJson(respon.body);
+  Currency result = currencyFromJson(respon.body);
   print(result.toString());
   return result;
 
  }
   Widget build(BuildContext context) {
-    print("Build");
     return FutureBuilder(
       future: getCurrency(),
       builder:(BuildContext context , AsyncSnapshot<Currency> snapshot){
