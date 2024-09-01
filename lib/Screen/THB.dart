@@ -26,7 +26,7 @@ class _LatestRateState extends State<LatestRate> {
 
     var result = await http.get(uri, headers: {
       "X-RapidAPI-Host": "currency-converter-pro1.p.rapidapi.com",
-      "x-rapidapi-key": "C05GBKbyg0mshuD0FmkuTgEJe7mQp1QktrHjsndVBQ98Lef6WS"
+      "x-rapidapi-key": "d030fa0032msha1613d4cd099d99p1906b8jsna6a62b0121bf"
     });
 
     Rate rate = rateFromJson(result.body);
